@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="bg-gray-100">
+          <!-- ANNOUNCEMENT BAR -->
+    <div class=" text-center py-4 text-xs font-medium tracking-wide">
+        Get 5% Off on Prepaid Orders | Code: <span class="font-bold">PAYDAY</span> | <a href="#" class="underline">Shop Now</a>
+    </div>
+        <!-- header  -->
+        <div class="h-20 w-full  flex justify-center items-center ">
+            <nav  class="w-full h-16  flex items-center justify-between bg-white px-4 md:justify-around ">
+                <div class="flex items-center gap-4">
+                <button id="menu-btn" class="lg:hidden text-2xl">
+                    <i class="ph ph-list"></i>
+                </button>
+                <a href="#" class="text-2xl font-bold flex items-end">
+                    <span>bo</span>
+                    <span class="text-red-600 relative mx-[1px]">
+                        A
+                    </span>
+                    <span>t</span>
+                </a>
+            </div>
+                <div class="hidden lg:flex items-center gap-8 ">
+                    <a href="" class=" hover:font-bold transition-all duration-300 ease-in-out">Categories</a>
+                    <a href="" class="hover:font-bold transition-all duration-300 ease-in-out">Daily Deals</a>
+                    <a href="" class="hover:font-bold transition-all duration-300 ease-in-out">Gift With boAt</a>
+                    <a href="" class="hover:font-bold transition-all duration-300 ease-in-out">Corporate Orders</a>
+                    <div class="group relative cursor-pointer">
+                    <span class="flex items-center gap-1 hover:font-bold transition-all duration-300 ease-in-out">More <i class="ph ph-caret-down"></i></span>
+                    <!-- Dropdown mockup -->
+                    <div class="absolute z-50 top-full left-0 mt-2 w-48 bg-white text-black shadow-xl rounded-md hidden group-hover:block p-2">
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded">Blogs</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 rounded">Earn ₹100</a>
+                    </div>
+                </div>
+                </div>
+                <!-- right side div  -->
+                <div class=" flex gap-2 md:gap-6 items-center" >
+                    <div class="hidden md:flex items-center gap-4 bg-gray-300 p-2 px-4 rounded-full ">
+                        <i class="ph ph-magnifying-glass text-gray-00"></i>
+                        <input type="text" placeholder="search" class="">
+                    </div>
+                    <button class="md:hidden flex text-xl"> <i class="ph ph-magnifying-glass"></i></button>
+                    <button class="text-xl"><i class="ph ph-user"></i></button>
+                    <button class="text-xl relative">
+                    <i class="ph ph-shopping-cart"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-boat-red text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center"></span>
+                </button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- product header  -->
+         <div id="boat-scroller" class="p-4 w-full overflow-hidden text-xs flex md:hidden gap-6 overflow-x-scroll whitespace-nowrap no-scrollbar">
+            <div class="flex flex-col justify-center items-center">
+                <img class="h-16 w-16 object-cover" src="https://www.boat-lifestyle.com/cdn/shop/files/best_seller_100X100.svg?v=1748341370" alt="">
+                <p>BestSeller</p>
+            </div>
+            <div>
+                <img class="h-16 w-16 object-cover" src="https://www.boat-lifestyle.com/cdn/shop/files/tws_aa22d83e-8823-4d76-91e9-e75fd34fb51d_100X100.png?v=1748428298" alt="">
+                <p>True Wireless</p>
+            </div>
+            <div>
+                <img class="h-16 w-16 object-cover" src="https://www.boat-lifestyle.com/cdn/shop/files/WH_b225905d-9064-4f64-9772-07fbcc521f0f_100X100.png?v=1748428298" alt="">
+                <p>BestSeller</p>
+            </div>
+            <div>
+                <img class="h-16 w-16 object-cover" src="https://www.boat-lifestyle.com/cdn/shop/files/neckband_660318e8-a68d-4572-bf8f-359f22319765_100X100.png?v=1748428772" alt="">
+                <p>BestSeller</p>
+            </div>
+            <div>
+                <img class="h-16 w-16 object-cover" src="https://www.boat-lifestyle.com/cdn/shop/files/smartwatch_4b47c9df-5ea9-4149-9cf8-ff5a9c8f5cc1_100X100.png?v=1748428298" alt="">
+                <p>BestSeller</p>
+            </div>
+            <div>
+                <img class="h-16 w-16 object-cover" src="https://www.boat-lifestyle.com/cdn/shop/files/WS_100X100.png?v=1748428298" alt="">
+                <p>BestSeller</p>
+            </div>
+         </div>
+        <!-- main content  -->
+        <main class="">
+            <!-- slider  -->
+            <section class="relative w-full h-[28vh] md:h-[86vh] overflow-hidden px-4 py-2 md:py-0 md:px-0">
+            <div id="slide-container" class="relative w-full h-full ">
+                <img class="w-full h-full object-cover rounded-xl md:rounded-none" src="https://www.boat-lifestyle.com/cdn/shop/files/payday-gif.gif?v=1764567344" alt="">
+                
+
+                <!-- slides button  -->
+                <div class="absolute bottom-2 md:bottom-6  h-6 w-full flex justify-center items-center">
+                    
+                             <button class="bg-gray-200 h-2 w-2 rounded-full"></button>
+                </div> 
+            </div>
+            <button id="next" class="hidden md:flex absolute top-1/2 left-8 -translate-y-1/2 z-50 bg-gray-500/80 rounded-full flex items-center justify-center p-2 hover:scale-110 transition-tranfrom duration-300 ease-in-out hover:bg-gray-500">
+                <i class="ph ph-caret-left text-2xl"></i>
+            </button>
+            <button id="next" class="hidden md:flex absolute top-1/2 right-8 -translate-y-1/2 z-50 bg-gray-500/80 rounded-full flex items-center justify-center p-2 hover:scale-110 transition-tranfrom duration-300 ease-in-out hover:bg-gray-500">
+                <i class="ph ph-caret-right text-2xl"></i>
+            </button>
+            
+        </section>
+
+        <section class="flex flex-col h- w-full">
+            <div class="flex gap-2 md:gap-16 bg-yellow-500 justify-center items-center text-[8px] md:text-xs md:text-sm">
+                <p>0% EMI on UPI</p>
+                <div class="bg-black rounded-full h-2 w-2"></div>
+                <p>Powered By Snapmint</p>
+                <div class="border-l-1 h-4 border-black/80"></div>
+                <p >IndusInd Bank</p>
+                <p>Yes Bank</p>
+                <div class="bg-black rounded-full h-2 w-2"></div>
+                <p>Powered by TWO</p>
+            </div>
+            <div class="flex-1 flex h-full items-center justify-center gap-4 md:gap-36 text-xs md:text-sm py-4">
+                <div class=" flex flex-col md:flex-row items-center justify-center ">
+                    <img class="h-16 md:h-20 w-16  md:w-20 object-fit" src="https://www.boat-lifestyle.com/cdn/shop/files/jshf_2-01-final-01_small.svg?v=1744365804" alt="">
+                    <div class="flex flex-col items-center">
+                        <p>12+3 Months</p>
+                        <p>Warranty</p>
+                    </div>
+                </div>
+                <div class=" flex flex-col md:flex-row items-center justify-center ">
+                    <img class="h-16 md:h-20 w-16  md:w-20object-fit" src="https://www.boat-lifestyle.com/cdn/shop/files/Group_334302_small.svg?v=1682336123" alt="">
+                    <div class="flex flex-col items-center">
+                        <p>GST</p>
+                        <p>Billing</p>
+                    </div>
+                </div>
+                <div class=" flex flex-col md:flex-row items-center justify-center ">
+                    <img class="h-16 md:h-20 w-16  md:w-20object-fit" src="https://www.boat-lifestyle.com/cdn/shop/files/Group_334303_small.svg?v=1682336123" alt="">
+                    <div class="flex flex-col items-center">
+                        <p>Free Express</p>
+                        <p>Delhivery</p>
+                    </div>
+                </div>
+                <div class=" flex flex-col md:flex-row items-center justify-center ">
+                    <img class="h-16 md:h-20 w-16  md:w-20object-fit" src="https://www.boat-lifestyle.com/cdn/shop/files/Group_334304_small.svg?v=1682336123" alt="">
+                    <div class="flex flex-col items-center">
+                        <p>7 Days</p>
+                        <p>Replacement</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- sale is live  -->
+
+        <section class="px-4 mt-4">
+            <div class="w-full  container mx-auto ">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="text-2xl md:text-3xl ">Sale <span class="font-semibold md:font-bold border-b-4 border-red-600">Is Live</span></h2>
+                    </div>
+                    <div class="flex gap-1">
+                        <h3 class="text-xs font-bold text-blue-900">View All</h3>
+                        <button class="border-1 h-4 w-4 text-xs rounded-full flex items-center justify-center"><i class="ph ph-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 lg:grid-cols-6 gap-2 py-4 md:py-6 text">
+                    <div class=" rounded-xl bg-gray-50 pb-2">
+                        <div class="relative ">
+                            <img class="w-full rounded-t-lg object-cover h-full" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Stone_350_pro_1.png?v=1742303499&width=200" alt="">
+                            <div class="absolute top-0 rounded-r-sm rounded-tl-lg bg-black text-[8px] md:text-xs text-white p-1 font-bold"><p>New Launch</p></div>
+                            <div class=" absolute w-full -bottom-4 h-6 md:h-8 bg-yellow-400 rounded-b-lg flex items-center justify-between px-1 md:px-2">
+                            <p class="text-[8px] md:text-xs font-semibold">12 Hours Playback</p>
+                            <div class="bg-white flex items-center justify-center gap-1 md:gap-2 rounded-sm px-1 md:px-2 text-[8px] md:text-xs">
+                                <i class="ph ph-star "></i>
+                                <p>4.8</p>
+                            </div>
+                        </div>
+
+                        </div>
+                        
+                        <!-- text  -->
+                        <div class="px-2 pt-8"> 
+                            <div>
+                                <h3 class="font-bold text-[12px] md:text-sm">boAt Stone 350 Pro</h3>
+                            </div>
+                            <div class="border-b-1 border-dashed border-gray-500/40 py-2"></div>
+                            <div class="relative flex items-center justify-between mt-2">
+                                <h3 class="font-bold text-[14px] md:text-lg">₹1,699</h3>
+                                <div class="flex gap-3 items-center justify-center">
+                                    <div class="flex relative items-center justify-center ">
+                                    <div class="absolute left-2 h-4  w-4 bg-gray-900 rounded-full"></div>
+                                    <div class=" h-4 w-4 bg-blue-400 rounded-full"></div>
+                                </div>
+                                <p class=" text-[10px] md:text-xs">+1</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-2 text-[10px] md:text-xs">
+                                <p>₹4,999</p>
+                                <h4 class=" font-bold text-green-600">66% off</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" rounded-xl bg-gray-50 pb-2">
+                        <div class="relative ">
+                            <img class="w-full rounded-t-lg" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/zenith_pro_LR.png?v=1751544158&width=200" alt="">
+                            <div class="absolute top-0 rounded-r-sm rounded-tl-lg bg-black text-[8px] md:text-xs text-white p-1 font-bold"><p>EXTRA 30% OFF</p></div>
+                            <div class=" absolute w-full -bottom-4 h-6 md:h-8 bg-yellow-400 rounded-b-lg flex items-center justify-between px-1 md:px-2">
+                            <p class="text-[8px] md:text-xs font-semibold">80 Hours Playback</p>
+                            <div class="bg-white flex items-center justify-center gap-1 md:gap-2 rounded-sm px-1 md:px-2 text-[8px] md:text-xs">
+                                <i class="ph ph-star "></i>
+                                <p>4.6</p>
+                            </div>
+                        </div>
+
+                        </div>
+                        
+                        <!-- text  -->
+                        <div class="px-2 pt-8"> 
+                            <div>
+                                <h3 class="font-bold text-[12px] md:text-sm">boAt Nirvana Zenith Pro</h3>
+                            </div>
+                            <div class="border-b-1 border-dashed border-gray-500/40 py-2"></div>
+                            <div class="relative flex items-center justify-between mt-2">
+                                <h3 class="font-bold text-[14px] md:text-lg">₹2,799</h3>
+                                <div class="flex gap-3 items-center justify-center">
+                                    <div class="flex relative items-center justify-center ">
+                                    <div class="absolute left-2 h-4  w-4 bg-yellow-800 rounded-full"></div>
+                                    <div class=" h-4 w-4 bg-gray-600 rounded-full"></div>
+                                </div>
+                                <p class=" text-[10px] md:text-xs">+1</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-2 text-[10px] md:text-xs">
+                                <p>₹14,499</p>
+                                <h4 class=" font-bold text-green-600">81% off</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" rounded-xl bg-gray-50 pb-2">
+                        <div class="relative ">
+                            <img class="w-full rounded-t-lg object-cover h-full" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Lifestyle_render_154400cd-4bd3-4dd8-9c4a-e56f27910199.jpg?v=1729580370&width=200" alt="">
+                            <div class="absolute top-0 rounded-r-sm rounded-tl-lg bg-black text-[8px] md:text-xs text-white p-1 font-bold"><p>EXTRA ₹100 OFF</p></div>
+                            <div class=" absolute w-full -bottom-4 h-6 md:h-8 bg-yellow-400 rounded-b-lg flex items-center justify-between px-1 md:px-2">
+                            <p class="text-[8px] md:text-xs font-semibold">BT Calling</p>
+                            <div class="bg-white flex items-center justify-center gap-1 md:gap-2 rounded-sm px-1 md:px-2 text-[8px] md:text-xs">
+                                <i class="ph ph-star "></i>
+                                <p>5.0</p>
+                            </div>
+                        </div>
+
+                        </div>
+                        
+                        <!-- text  -->
+                        <div class="px-2 pt-8"> 
+                            <div>
+                                <h3 class="font-bold text-[12px] md:text-sm">boAt Lunar Discovery </h3>
+                            </div>
+                            <div class="border-b-1 border-dashed border-gray-500/40 py-2"></div>
+                            <div class="relative flex items-center justify-between mt-2">
+                                <h3 class="font-bold text-[14px] md:text-lg">₹1,499</h3>
+                                <div class="flex gap-3 items-center justify-center">
+                                    <div class="flex relative items-center justify-center ">
+                                    <div class="absolute left-2 h-4  w-4 bg-sky-900 rounded-full"></div>
+                                    <div class=" h-4 w-4 bg-gray-600 rounded-full"></div>
+                                </div>
+                                <p class=" text-[10px] md:text-xs">+4</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-2 text-[10px] md:text-xs">
+                                <p>₹3,499</p>
+                                <h4 class=" font-bold text-green-600">70% off</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" rounded-xl bg-gray-50 pb-2">
+                        <div class="relative  ">
+                            <img class="w-full rounded-t-lg object-cover h-full" src="https://www.boat-lifestyle.com/cdn/shop/products/bassheads-110-white_300x.png?v=1613457275" alt="">
+                            <div class="absolute top-0 rounded-r-sm rounded-tl-lg bg-black text-[8px] md:text-xs text-white p-1 font-bold"><p>BestSeller</p></div>
+                            <div class=" absolute w-full -bottom-4 h-6 md:h-8 bg-yellow-400 rounded-b-lg flex items-center justify-between px-1 md:px-2">
+                            <p class="text-[8px] md:text-xs font-semibold">60 Hours Playback</p>
+                            <div class="bg-white flex items-center justify-center gap-1 md:gap-2 rounded-sm px-1 md:px-2 text-[8px] md:text-xs">
+                                <i class="ph ph-star "></i>
+                                <p>4.5</p>
+                            </div>
+                        </div>
+
+                        </div>
+                        
+                        <!-- text  -->
+                        <div class="px-2 pt-8"> 
+                            <div>
+                                <h3 class="font-bold text-[12px] md:text-sm">boAt Rockerz 255 Pro+</h3>
+                            </div>
+                            <div class="border-b-1 border-dashed border-gray-500/40 py-2"></div>
+                            <div class="relative flex items-center justify-between mt-2">
+                                <h3 class="font-bold text-[14px] md:text-lg">₹1,199</h3>
+                                <div class="flex gap-3 items-center justify-center">
+                                    <div class="flex relative items-center justify-center ">
+                                    <div class="absolute left-2 h-4  w-4 bg-gray-100 rounded-full"></div>
+                                    <div class=" h-4 w-4 bg-gray-600 rounded-full"></div>
+                                </div>
+                                <p class=" text-[10px] md:text-xs">+5</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-2 text-[10px] md:text-xs">
+                                <p>₹4,499</p>
+                                <h4 class=" font-bold text-green-600">70% off</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" rounded-xl bg-gray-50 pb-2">
+                        <div class="relative ">
+                            <img class="w-full rounded-t-lg" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Artboard_4_copy_074798f5-db43-4d21-b4b6-ca872b25d556.png?v=1745476435&width=200" alt="">
+                            <div class="absolute top-0 rounded-r-sm rounded-tl-lg bg-black text-[8px] md:text-xs text-white p-1 font-bold"><p>EXTRA OFF</p></div>
+                            <div class=" absolute w-full -bottom-4 h-6 md:h-8 bg-yellow-400 rounded-b-lg flex items-center justify-between px-1 md:px-2">
+                            <p class="text-[8px] md:text-xs font-semibold">10000mAh Battery</p>
+                            <div class="bg-white flex items-center justify-center gap-1 md:gap-2 rounded-sm px-1 md:px-2 text-[8px] md:text-xs">
+                                <i class="ph ph-star "></i>
+                                <p>5.0</p>
+                            </div>
+                        </div>
+
+                        </div>
+                        
+                        <!-- text  -->
+                        <div class="px-2 pt-8"> 
+                            <div>
+                                <h3 class="font-bold text-[12px] md:text-sm">boAt EnergyShroom</h3>
+                            </div>
+                            <div class="border-b-1 border-dashed border-gray-500/40 py-2"></div>
+                            <div class="relative flex items-center justify-between mt-2">
+                                <h3 class="font-bold text-[14px] md:text-lg">₹1,399</h3>
+                                <div class="flex gap-3 items-center justify-center">
+                                    <div class="flex relative items-center justify-center ">
+                                    <div class="absolute left-2 h-4  w-4 bg-sky-700 rounded-full"></div>
+                                    <div class=" h-4 w-4 bg-gray-600 rounded-full"></div>
+                                </div>
+                                <p class=" text-[10px] md:text-xs">+2</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-2 text-[10px] md:text-xs">
+                                <p>₹3,499</p>
+                                <h4 class=" font-bold text-green-600">60% off</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" rounded-xl bg-gray-50 pb-2">
+                        <div class="relative ">
+                            <img class="w-full rounded-t-lg" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/AD_Alpha_new_colors.png?v=1747634146&width=200" alt="">
+                            <div class="absolute top-0 rounded-r-sm rounded-tl-lg bg-black text-[8px] md:text-xs text-white p-1 font-bold"><p>BestSeller</p></div>
+                            <div class=" absolute w-full -bottom-4 h-6 md:h-8 bg-yellow-400 rounded-b-lg flex items-center justify-between px-1 md:px-2">
+                            <p class="text-[8px] md:text-xs font-semibold">35 Hours Playback</p>
+                            <div class="bg-white flex items-center justify-center gap-1 md:gap-2 rounded-sm px-1 md:px-2 text-[8px] md:text-xs">
+                                <i class="ph ph-star "></i>
+                                <p>4.5</p>
+                            </div>
+                        </div>
+
+                        </div>
+                        
+                        <!-- text  -->
+                        <div class="px-2 pt-8"> 
+                            <div>
+                                <h3 class="font-bold text-[12px] md:text-sm">boAt Airdopes Alpha</h3>
+                            </div>
+                            <div class="border-b-1 border-dashed border-gray-500/40 py-2"></div>
+                            <div class="relative flex items-center justify-between mt-2">
+                                <h3 class="font-bold text-[14px] md:text-lg">₹899</h3>
+                                <div class="flex gap-3 items-center justify-center">
+                                    <div class="flex relative items-center justify-center ">
+                                    <div class="absolute left-2 h-4  w-4 bg-gray-900 rounded-full"></div>
+                                    <div class=" h-4 w-4 bg-gray-600 rounded-full"></div>
+                                </div>
+                                <p class=" text-[10px] md:text-xs">+5</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-2 text-[10px] md:text-xs">
+                                <p>₹3,499</p>
+                                <h4 class=" font-bold text-green-600">74% off</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- explore nirvana  -->
+
+       <section class="px-4 mt-4">
+            <div class="w-full  container mx-auto ">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="text-2xl md:text-3xl ">Explore <span class="font-bold border-b-4 border-red-600">Nirvana</span></h2>
+                    </div>
+                    <div class="flex gap-1">
+                        <h3 class="text-xs font-bold text-blue-900">View All</h3>
+                        <button class="border-1 h-4 w-4 text-xs rounded-full flex items-center justify-center"><i class="ph ph-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="py-6">
+                    <img class="w-full h-[90px] md:h-auto rounded-xl object-cover" src="https://www.boat-lifestyle.com/cdn/shop/files/Strips_a756e689-891e-4459-a006-de3a9dd98014_1200x.png?v=1761645582" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- big deals  -->
+        <section class="px-4 mt-4">
+            <div class="w-full  container mx-auto ">
+                <div class=" overflow-hidden ">
+                    <div class="flex items-center justify-between">
+                        <div>
+                        <h2 class="text-2xl md:text-3xl font-semibold">Big <span class="font-bold border-b-4 border-red-600">Deals</span></h2>
+                    </div>
+                    <div class="flex gap-1">
+                        <h3 class="text-xs font-bold text-blue-900">View All</h3>
+                        <button class="border-1 h-4 w-4 text-xs rounded-full flex items-center justify-center"><i class="ph ph-arrow-right"></i></button>
+                    </div>
+                    </div>
+                    <div id="boat-scroller" class="w-full flex items-center text-sm md:text-lg  gap-6 text-gray-600 py-6 overflow-x-scroll whitespace-nowrap no-scrollbar">
+                        <div class="bg-gray-300 rounded-full font-bold text-gray-900/80 py-1 px-4">
+                            <p>All Deals</p>
+                        </div>
+                        <div class="">
+                            <p>True Wireless Earbuds</p>
+                        </div>
+                        <div class="">
+                            <p>Smartwatches</p>
+                        </div>
+                        <div class="">
+                            <p>Speakers And Soundbars</p>
+                        </div>
+                        <div class="">
+                            <p>Neckbands And Headphones</p>
+                        </div>
+                        <!-- <p>All Deals</p>
+                        <p>True Wireless Earbuds</p>
+                        <p>Smartwatches</p>
+                        <p>Speakers And Soundbars</p>
+                        <p>Neckbands And Headphones</p> -->
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 lg:grid-cols-6 gap-2 py-4 md:py-6 text">
+                    <div class=" rounded-xl bg-gray-50 pb-2">
+                        <div class="relative ">
+                            <img class="w-full rounded-t-lg object-cover h-full" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/AD_181_pro_1.png?v=1745234576&width=200" alt="">
+                            <div class="absolute top-0 rounded-r-sm rounded-tl-lg bg-black text-[8px] md:text-xs text-white p-1 font-bold"><p>New Launch</p></div>
+                            <div class=" absolute w-full -bottom-4 h-6 md:h-8 bg-yellow-400 rounded-b-lg flex items-center justify-between px-1 md:px-2">
+                            <p class="text-[8px] md:text-xs font-semibold">12 Hours Playback</p>
+                            <div class="bg-white flex items-center justify-center gap-1 md:gap-2 rounded-sm px-1 md:px-2 text-[8px] md:text-xs">
+                                <i class="ph ph-star "></i>
+                                <p>4.8</p>
+                            </div>
+                        </div>
+
+                        </div>
+                        
+                        <!-- text  -->
+                        <div class="px-2 pt-8"> 
+                            <div>
+                                <h3 class="font-bold text-[12px] md:text-sm">boAt Airdops 181 Pro</h3>
+                            </div>
+                            <div class="border-b-1 border-dashed border-gray-500/40 py-2"></div>
+                            <div class="relative flex items-center justify-between mt-2">
+                                <h3 class="font-bold text-[14px] md:text-lg">₹999</h3>
+                                <div class="flex gap-3 items-center justify-center">
+                                    <div class="flex relative items-center justify-center ">
+                                    <div class="absolute left-2 h-4  w-4 bg-gray-900 rounded-full"></div>
+                                    <div class=" h-4 w-4 bg-blue-400 rounded-full"></div>
+                                </div>
+                                <p class=" text-[10px] md:text-xs">+1</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-2 text-[10px] md:text-xs">
+                                <p>₹2,999</p>
+                                <h4 class=" font-bold text-green-600">66% off</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" rounded-xl bg-gray-50 pb-2">
+                        <div class="relative ">
+                            <img class="w-full rounded-t-lg" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/63_pro_LR.png?v=1724672727&width=200" alt="">
+                            <div class="absolute top-0 rounded-r-sm rounded-tl-lg bg-black text-[8px] md:text-xs text-white p-1 font-bold"><p>EXTRA 30% OFF</p></div>
+                            <div class=" absolute w-full -bottom-4 h-6 md:h-8 bg-yellow-400 rounded-b-lg flex items-center justify-between px-1 md:px-2">
+                            <p class="text-[8px] md:text-xs font-semibold">30W RMS Sound</p>
+                            <div class="bg-white flex items-center justify-center gap-1 md:gap-2 rounded-sm px-1 md:px-2 text-[8px] md:text-xs">
+                                <i class="ph ph-star "></i>
+                                <p>4.6</p>
+                            </div>
+                        </div>
+
+                        </div>
+                        
+                        <!-- text  -->
+                        <div class="px-2 pt-8"> 
+                            <div>
+                                <h3 class="font-bold text-[12px] md:text-sm">boAt Party Pal 63 pro</h3>
+                            </div>
+                            <div class="border-b-1 border-dashed border-gray-500/40 py-2"></div>
+                            <div class="relative flex items-center justify-between mt-2">
+                                <h3 class="font-bold text-[14px] md:text-lg">₹2,799</h3>
+                                <div class="flex gap-3 items-center justify-center">
+                                    <div class="flex relative items-center justify-center ">
+                                    <div class="absolute left-2 h-4  w-4 bg-yellow-800 rounded-full"></div>
+                                    <div class=" h-4 w-4 bg-gray-600 rounded-full"></div>
+                                </div>
+                                <p class=" text-[10px] md:text-xs">+1</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-2 text-[10px] md:text-xs">
+                                <p>₹14,499</p>
+                                <h4 class=" font-bold text-green-600">81% off</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" rounded-xl bg-gray-50 pb-2">
+                        <div class="relative ">
+                            <img class="w-full rounded-t-lg object-cover h-full" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Rockerz_650_pp_renders_main_banner.124.png?v=1740735495&width=200" alt="">
+                            <div class="absolute top-0 rounded-r-sm rounded-tl-lg bg-black text-[8px] md:text-xs text-white p-1 font-bold"><p>EXTRA ₹100 OFF</p></div>
+                            <div class=" absolute w-full -bottom-4 h-6 md:h-8 bg-yellow-400 rounded-b-lg flex items-center justify-between px-1 md:px-2">
+                            <p class="text-[8px] md:text-xs font-semibold">BT Speaker</p>
+                            <div class="bg-white flex items-center justify-center gap-1 md:gap-2 rounded-sm px-1 md:px-2 text-[8px] md:text-xs">
+                                <i class="ph ph-star "></i>
+                                <p>5.0</p>
+                            </div>
+                        </div>
+
+                        </div>
+                        
+                        <!-- text  -->
+                        <div class="px-2 pt-8"> 
+                            <div>
+                                <h3 class="font-bold text-[12px] md:text-sm">boAt Rockerz 650pro  </h3>
+                            </div>
+                            <div class="border-b-1 border-dashed border-gray-500/40 py-2"></div>
+                            <div class="relative flex items-center justify-between mt-2">
+                                <h3 class="font-bold text-[14px] md:text-lg">₹1,999</h3>
+                                <div class="flex gap-3 items-center justify-center">
+                                    <div class="flex relative items-center justify-center ">
+                                    <div class="absolute left-2 h-4  w-4 bg-sky-900 rounded-full"></div>
+                                    <div class=" h-4 w-4 bg-gray-600 rounded-full"></div>
+                                </div>
+                                <p class=" text-[10px] md:text-xs">+4</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-2 text-[10px] md:text-xs">
+                                <p>₹3,499</p>
+                                <h4 class=" font-bold text-green-600">70% off</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" rounded-xl bg-gray-50 pb-2">
+                        <div class="relative  ">
+                            <img class="w-full rounded-t-lg object-cover h-full" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/413_lifestyle.png?v=1752737623&width=200" alt="">
+                            <div class="absolute top-0 rounded-r-sm rounded-tl-lg bg-black text-[8px] md:text-xs text-white p-1 font-bold"><p>BestSeller</p></div>
+                            <div class=" absolute w-full -bottom-4 h-6 md:h-8 bg-yellow-400 rounded-b-lg flex items-center justify-between px-1 md:px-2">
+                            <p class="text-[8px] md:text-xs font-semibold">60 Hours Playback</p>
+                            <div class="bg-white flex items-center justify-center gap-1 md:gap-2 rounded-sm px-1 md:px-2 text-[8px] md:text-xs">
+                                <i class="ph ph-star "></i>
+                                <p>4.5</p>
+                            </div>
+                        </div>
+
+                        </div>
+                        
+                        <!-- text  -->
+                        <div class="px-2 pt-8"> 
+                            <div>
+                                <h3 class="font-bold text-[12px] md:text-sm">boAt Rockerz 255 Pro+</h3>
+                            </div>
+                            <div class="border-b-1 border-dashed border-gray-500/40 py-2"></div>
+                            <div class="relative flex items-center justify-between mt-2">
+                                <h3 class="font-bold text-[14px] md:text-lg">₹1,199</h3>
+                                <div class="flex gap-3 items-center justify-center">
+                                    <div class="flex relative items-center justify-center ">
+                                    <div class="absolute left-2 h-4  w-4 bg-gray-100 rounded-full"></div>
+                                    <div class=" h-4 w-4 bg-red-600 rounded-full"></div>
+                                </div>
+                                <p class=" text-[10px] md:text-xs">+4</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-2 text-[10px] md:text-xs">
+                                <p>₹2,499</p>
+                                <h4 class=" font-bold text-green-600">70% off</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" rounded-xl bg-gray-50 pb-2">
+                        <div class="relative ">
+                            <img class="w-full rounded-t-lg" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/701_ANC.png?v=1756381019&width=200" alt="">
+                            <div class="absolute top-0 rounded-r-sm rounded-tl-lg bg-black text-[8px] md:text-xs text-white p-1 font-bold"><p>EXTRA OFF</p></div>
+                            <div class=" absolute w-full -bottom-4 h-6 md:h-8 bg-yellow-400 rounded-b-lg flex items-center justify-between px-1 md:px-2">
+                            <p class="text-[8px] md:text-xs font-semibold">Wireless</p>
+                            <div class="bg-white flex items-center justify-center gap-1 md:gap-2 rounded-sm px-1 md:px-2 text-[8px] md:text-xs">
+                                <i class="ph ph-star "></i>
+                                <p>5.0</p>
+                            </div>
+                        </div>
+
+                        </div>
+                        
+                        <!-- text  -->
+                        <div class="px-2 pt-8"> 
+                            <div>
+                                <h3 class="font-bold text-[12px] md:text-sm">boAt Earbuds 114</h3>
+                            </div>
+                            <div class="border-b-1 border-dashed border-gray-500/40 py-2"></div>
+                            <div class="relative flex items-center justify-between mt-2">
+                                <h3 class="font-bold text-[14px] md:text-lg">₹1,399</h3>
+                                <div class="flex gap-3 items-center justify-center">
+                                    <div class="flex relative items-center justify-center ">
+                                    <div class="absolute left-2 h-4  w-4 bg-sky-700 rounded-full"></div>
+                                    <div class=" h-4 w-4 bg-gray-600 rounded-full"></div>
+                                </div>
+                                <p class=" text-[10px] md:text-xs">+2</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-2 text-[10px] md:text-xs">
+                                <p>₹1,499</p>
+                                <h4 class=" font-bold text-green-600">60% off</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" rounded-xl bg-gray-50 pb-2">
+                        <div class="relative ">
+                            <img class="w-full rounded-t-lg" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Rockerz_x_Naruto_psb-min.png?v=1751366366&width=200" alt="">
+                            <div class="absolute top-0 rounded-r-sm rounded-tl-lg bg-black text-[8px] md:text-xs text-white p-1 font-bold"><p>BestSeller</p></div>
+                            <div class=" absolute w-full -bottom-4 h-6 md:h-8 bg-yellow-400 rounded-b-lg flex items-center justify-between px-1 md:px-2">
+                            <p class="text-[8px] md:text-xs font-semibold">35 Hours Playback</p>
+                            <div class="bg-white flex items-center justify-center gap-1 md:gap-2 rounded-sm px-1 md:px-2 text-[8px] md:text-xs">
+                                <i class="ph ph-star "></i>
+                                <p>4.5</p>
+                            </div>
+                        </div>
+
+                        </div>
+                        
+                        <!-- text  -->
+                        <div class="px-2 pt-8"> 
+                            <div>
+                                <h3 class="font-bold text-[12px] md:text-sm">boAt Rockerz 413</h3>
+                            </div>
+                            <div class="border-b-1 border-dashed border-gray-500/40 py-2"></div>
+                            <div class="relative flex items-center justify-between mt-2">
+                                <h3 class="font-bold text-[14px] md:text-lg">₹899</h3>
+                                <div class="flex gap-3 items-center justify-center">
+                                    <div class="flex relative items-center justify-center ">
+                                    <div class="absolute left-2 h-4  w-4 bg-gray-900 rounded-full"></div>
+                                    <div class=" h-4 w-4 bg-gray-600 rounded-full"></div>
+                                </div>
+                                <p class=" text-[10px] md:text-xs">+5</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-2 text-[10px] md:text-xs">
+                                <p>₹1,499</p>
+                                <h4 class=" font-bold text-green-600">74% off</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- categories  -->
+         <section class=" hidden md:flex px-4 mt-4">
+            <div class="w-full  container mx-auto ">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="text-2xl md:text-3xl ">Shops by <span class="font-bold border-b-4 border-red-600">Categories</span></h2>
+                    </div>
+                    <div class="flex gap-1">
+                        <h3 class="text-xs font-bold text-blue-900">View All</h3>
+                        <button class="border-1 h-4 w-4 text-xs rounded-full flex items-center justify-center"><i class="ph ph-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-4 lg:gap-10 py-8 text-sm font-semibold">
+                    <div class="px-2 md:px-4 flex flex-col justify-center items-center 
+                    ">
+                        <img class="h-20 w-20 object-cover mb-4" src="https://www.boat-lifestyle.com/cdn/shop/files/True-wireless-earbuds_small.png?v=1684842854" alt="">
+                        <p>True Wireless</p>
+                        <p>Earbuds</p>
+                    </div>
+                    <div class=" px-2 md:px-4 flex flex-col justify-center items-center">
+                        <img class="h-20 w-20 object-cover mb-4" src="https://www.boat-lifestyle.com/cdn/shop/files/Neckbands_bc6343f4-622f-4ebd-bb36-205643c3bf78_small.png?v=1684842854" alt="">
+                        <p>Neckbands</p>
+                    
+                    </div>
+                    <div class=" px-2 md:px-4 flex flex-col justify-center items-center">
+                        <img class="h-20 w-20 object-cover mb-4" src="https://www.boat-lifestyle.com/cdn/shop/files/Smartwatches_88f12bcf-24bd-4e3a-aacb-ecc204f62179_small.png?v=1684842853" alt="">
+                        <p>Smart</p>
+                        <p>Watches</p>
+                    </div>
+                    <div class=" px-2 md:px-4 flex flex-col justify-center items-center">
+                        <img class="h-20 w-20 object-cover mb-4" src="https://www.boat-lifestyle.com/cdn/shop/files/nirvana_52689447-c1bb-4bb8-8fa0-0496e3715fc0_small.png?v=1727229889" alt="">
+                        <p>Nirvana</p>
+                        
+                    </div>
+                    <div class=" px-2 md:px-4 flex flex-col justify-center items-center">
+                        <img class="h-20 w-20 object-cover mb-4" src="https://www.boat-lifestyle.com/cdn/shop/files/Wireless-Headphones_small.png?v=1684842854" alt="">
+                        <p>Wireless</p>
+                        <p>Headphones</p>
+                    </div>
+                    <div class=" px-2 md:px-4 flex flex-col justify-center items-center">
+                        <img class="h-20 w-20 object-cover mb-4" src="https://www.boat-lifestyle.com/cdn/shop/files/Wireless-Speaker_small.png?v=1684842854" alt="">
+                        <p>Wireless</p>
+                        <p>Speakers</p>
+                    </div>
+                    <div class=" px-2 md:px-4 flex flex-col justify-center items-center">
+                        <img class="h-20 w-20 object-cover mb-4" src="https://www.boat-lifestyle.com/cdn/shop/files/Wired-Headphones_small.png?v=1684842854" alt="">
+                        <p>Wired</p>
+                        <p>Headphones</p>
+                    </div>
+                    <div class=" px-2 md:px-4 flex flex-col justify-center items-center">
+                        <img class="h-20 w-20 object-cover mb-4" src="https://www.boat-lifestyle.com/cdn/shop/files/Wired-Earphones_small.png?v=1684842854" alt="">
+                        <p>Wired</p>
+                        <p>Earphones</p>
+                    </div>
+                    <div class=" px-2 md:px-4 flex flex-col justify-center items-center">
+                        <img class="h-20 w-20 object-cover mb-4" src="https://www.boat-lifestyle.com/cdn/shop/files/Soundbars_d9a7bdfd-e780-4581-ab85-f2e86f84cd28_small.png?v=1684842854" alt="">
+                        <p>Soundbars</p>
+                    </div>
+                    <div class=" px-2 md:px-4 flex flex-col justify-center items-center">
+                        <img class="h-20 w-20 object-cover mb-4" src="https://www.boat-lifestyle.com/cdn/shop/files/Gaming-Headphones_small.png?v=1684842853" alt="">
+                        <p>Gaming</p>
+                        <p>Headphones</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- explore bestseller  -->
+                <section class="px-4 mt-4">
+            <div class="w-full  container mx-auto ">
+                <div class=" overflow-hidden ">
+                    <div class="flex items-center justify-between">
+                        <div>
+                        <h2 class="text-2xl md:text-3xl font-semibold">Explore <span class="font-bold border-b-4 border-red-600">BestSeller</span></h2>
+                    </div>
+                    <div class="flex gap-1">
+                        <h3 class="text-xs font-bold text-blue-900">View All</h3>
+                        <button class="border-1 h-4 w-4 text-xs rounded-full flex items-center justify-center"><i class="ph ph-arrow-right"></i></button>
+                    </div>
+                    </div>
+                    <div id="boat-scroller" class=" w-full flex items-center  gap-6 py-6 overflow-x-scroll whitespace-nowrap no-scrollbar">
+                        <div class="w-80 h-90 rounded-xl pb-2">
+                        <div class="w-80 h-80">
+                            <video
+                                class="h-80 w-80 object-cover rounded-lg" muted loop
+                                src="https://www.boat-lifestyle.com/cdn/shop/files/quinn_RUxbhR7CvjkNtlFUDxgw9.mp4"
+                                poster="https://www.boat-lifestyle.com/cdn/shop/files/quinn_N8V0FmOXVCG4QfYvPSp1w.jpg"
+                                onmouseover="this.play()"
+                                onmouseout="this.pause(); this.currentTime = 0;"
+                            ></video>
+                            </div>
+                        
+                        <!-- text  -->
+                        <div class=" text-center pt-2  font-semibold"> 
+                            <h3>Smartwatches</h3>
+                        </div>
+                    </div>
+                        <div class="w-80 h-90 rounded-xl pb-2">
+                        <div class="w-80 h-80">
+                            <video
+                                class="h-80 w-80 object-cover rounded-lg" muted loop
+                                src="https://www.boat-lifestyle.com/cdn/shop/files/quinn_Bejc8URjU1NSXdhabLCmD.mp4"
+                                poster="https://www.boat-lifestyle.com/cdn/shop/files/quinn_9O6xvZXZ3kYLbUbtsnj4S.jpg"
+                                onmouseover="this.play()"
+                                onmouseout="this.pause(); this.currentTime = 0;"
+                            ></video>
+                            </div>
+                        
+                        <!-- text  -->
+                        <div class=" text-center pt-2  font-semibold"> 
+                            <h3>Wireless Earbuds</h3>
+                        </div>
+                    </div>
+                        <div class="w-80 h-90 rounded-xl pb-2">
+                        <div class="w-80 h-80">
+                            <video
+                                class="h-80 w-80 object-cover rounded-lg" muted loop
+                                src="https://www.boat-lifestyle.com/cdn/shop/files/quinn_OyJHanx4QSdUN3OVGTO7C.mp4"
+                                poster="https://www.boat-lifestyle.com/cdn/shop/files/quinn_KXwTUL2r91fh5uAHqSyIH.jpg"
+                                onmouseover="this.play()"
+                                onmouseout="this.pause(); this.currentTime = 0;"
+                            ></video>
+                            </div>
+                        
+                        <!-- text  -->
+                        <div class=" text-center pt-2  font-semibold"> 
+                            <h3>Neckbands</h3>
+                        </div>
+                    </div>
+                        <div class="w-80 h-90 rounded-xl pb-2">
+                        <div class="w-80 h-80">
+                            <video
+                                class="h-80 w-80 object-cover rounded-lg" muted loop
+                                src="https://www.boat-lifestyle.com/cdn/shop/files/quinn_CpsRIdJWtpXyFN3enwbXd.mp4"
+                                poster="https://www.boat-lifestyle.com/cdn/shop/files/quinn_v90hMzAEa585W2YTUR9UF.jpg"
+                                onmouseover="this.play()"
+                                onmouseout="this.pause(); this.currentTime = 0;"
+                            ></video>
+                            </div>
+                        
+                        <!-- text  -->
+                        <div class=" text-center pt-2  font-semibold"> 
+                            <h3>Headphones</h3>
+                        </div>
+                    </div>
+                        <div class="w-80 h-90 rounded-xl pb-2">
+                        <div class="w-80 h-80">
+                            <video
+                                class="h-80 w-80 object-cover rounded-lg" muted loop
+                                src="https://www.boat-lifestyle.com/cdn/shop/files/quinn_j1TwOEeceKYOJc7d7mAim.mp4"
+                                poster="https://www.boat-lifestyle.com/cdn/shop/files/quinn_FY7dfyFMiXzNTqSLFu2lV.jpg"
+                                onmouseover="this.play()"
+                                onmouseout="this.pause(); this.currentTime = 0;"
+                            ></video>
+                            </div>
+                        
+                        <!-- text  -->
+                        <div class=" text-center pt-2  font-semibold"> 
+                            <h3>Wireless Speakers</h3>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <!-- top picks  -->
+        <section class="px-4 mt-4">
+            <div class="w-full  container mx-auto ">
+                <div class=" overflow-hidden ">
+                    <div class="flex items-center justify-between">
+                        <div>
+                        <h2 class="text-2xl md:text-3xl font-semibold">Top Picks <span class="font-bold border-b-4 border-red-600">For You</span></h2>
+                    </div>
+                    <div class="flex gap-1">
+                        <h3 class="text-xs font-bold text-blue-900">View All</h3>
+                        <button class="border-1 h-4 w-4 text-xs rounded-full flex items-center justify-center"><i class="ph ph-arrow-right"></i></button>
+                    </div>
+                    </div>
+                    <div id="boat-scroller" class="w-full flex items-center text-sm md:text-lg  gap-6 text-gray-600 py-6 overflow-x-scroll whitespace-nowrap no-scrollbar">
+                        <div  class="bg-gray-300 rounded-full font-bold text-gray-900/80 py-1 px-4">
+                            <p>New Launches</p>
+                        </div>
+                        <div class="">
+                            <p>Personalization</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 lg:grid-cols-6 gap-2 py-4 md:py-6 text">
+                    <div class=" rounded-xl bg-gray-50 pb-2">
+                        <div class="relative ">
+                            <img class="w-full rounded-t-lg object-cover h-full" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/PB_300.png?v=1763116169&width=200" alt="">
+                            <div class="absolute top-0 rounded-r-sm rounded-tl-lg bg-black text-[8px] md:text-xs text-white p-1 font-bold"><p>New Launch</p></div>
+                            <div class=" absolute w-full -bottom-4 h-6 md:h-8 bg-yellow-400 rounded-b-lg flex items-center justify-between px-1 md:px-2">
+                            <p class="text-[8px] md:text-xs font-semibold">10000 mAh</p>
+                        
+                        </div>
+
+                        </div>
+                        
+                        <!-- text  -->
+                        <div class="px-2 pt-8"> 
+                            <div>
+                                <h3 class="font-bold text-[12px] md:text-sm">Energyshroom PB300 SPL</h3>
+                            </div>
+                            <div class="border-b-1 border-dashed border-gray-500/40 py-2"></div>
+                            <div class="relative flex items-center justify-between mt-2">
+                                <h3 class="font-bold text-[14px] md:text-lg">₹1,299</h3>
+                                <div class="flex gap-3 items-center justify-center">
+                                    <div class="flex relative items-center justify-center ">
+                                    <div class="absolute left-2 h-4  w-4 bg-gray-900 rounded-full"></div>
+                                    <div class=" h-4 w-4 bg-blue-400 rounded-full"></div>
+                                </div>
+                                <p class=" text-[10px] md:text-xs">+1</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-2 text-[10px] md:text-xs">
+                                <p>₹4,999</p>
+                                <h4 class=" font-bold text-green-600">66% off</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" rounded-xl bg-gray-50 pb-2">
+                        <div class="relative ">
+                            <img class="w-full rounded-t-lg" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Chrome_Eon_Lifestyle.png?v=1762433095&width=200" alt="">
+                            <div class="absolute top-0 rounded-r-sm rounded-tl-lg bg-black text-[8px] md:text-xs text-white p-1 font-bold"><p>New Launch</p></div>
+                            <div class=" absolute w-full -bottom-4 h-6 md:h-8 bg-yellow-400 rounded-b-lg flex items-center justify-between px-1 md:px-2">
+                            <p class="text-[8px] md:text-xs font-semibold">IN-Built AI Coach</p>
+                            
+                        </div>
+
+                        </div>
+                        
+                        <!-- text  -->
+                        <div class="px-2 pt-8"> 
+                            <div>
+                                <h3 class="font-bold text-[12px] md:text-sm">boAt Chrome Eon</h3>
+                            </div>
+                            <div class="border-b-1 border-dashed border-gray-500/40 py-2"></div>
+                            <div class="relative flex items-center justify-between mt-2">
+                                <h3 class="font-bold text-[14px] md:text-lg">₹2,799</h3>
+                                <div class="flex gap-3 items-center justify-center">
+                                    <div class="flex relative items-center justify-center ">
+                                    <div class="absolute left-2 h-4  w-4 bg-yellow-800 rounded-full"></div>
+                                    <div class=" h-4 w-4 bg-gray-600 rounded-full"></div>
+                                </div>
+                                <p class=" text-[10px] md:text-xs">+1</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-2 text-[10px] md:text-xs">
+                                <p>₹6,499</p>
+                                <h4 class=" font-bold text-green-600">81% off</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" rounded-xl bg-gray-50 pb-2">
+                        <div class="relative ">
+                            <img class="w-full rounded-t-lg object-cover h-full" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/3050D_1.png?v=1761897393&width=200" alt="">
+                            <div class="absolute top-0 rounded-r-sm rounded-tl-lg bg-black text-[8px] md:text-xs text-white p-1 font-bold"><p>New Launch</p></div>
+                            <div class=" absolute w-full -bottom-4 h-6 md:h-8 bg-yellow-400 rounded-b-lg flex items-center justify-between px-1 md:px-2">
+                            <p class="text-[8px] md:text-xs font-semibold">300W RMS Sound</p>
+                            
+                        </div>
+
+                        </div>
+                        
+                        <!-- text  -->
+                        <div class="px-2 pt-8"> 
+                            <div>
+                                <h3 class="font-bold text-[12px] md:text-sm">boAt Aavante 3.13050D  </h3>
+                            </div>
+                            <div class="border-b-1 border-dashed border-gray-500/40 py-2"></div>
+                            <div class="relative flex items-center justify-between mt-2">
+                                <h3 class="font-bold text-[14px] md:text-lg">₹11,499</h3>
+                                <div class="flex gap-3 items-center justify-center">
+                                    <div class="flex relative items-center justify-center ">
+                                    <div class="absolute left-2 h-4  w-4 bg-sky-900 rounded-full"></div>
+                                    <div class=" h-4 w-4 bg-gray-600 rounded-full"></div>
+                                </div>
+                                <p class=" text-[10px] md:text-xs">+4</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-2 text-[10px] md:text-xs">
+                                <p>₹31,499</p>
+                                <h4 class=" font-bold text-green-600">70% off</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" rounded-xl bg-gray-50 pb-2">
+                        <div class="relative  ">
+                            <img class="w-full rounded-t-lg object-cover h-full" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/700_anc_1.png?v=1761739386&width=200" alt="">
+                            <div class="absolute top-0 rounded-r-sm rounded-tl-lg bg-black text-[8px] md:text-xs text-white p-1 font-bold"><p>New Launch</p></div>
+                            <div class=" absolute w-full -bottom-4 h-6 md:h-8 bg-yellow-400 rounded-b-lg flex items-center justify-between px-1 md:px-2">
+                            <p class="text-[8px] md:text-xs font-semibold">48 dB Hybrid ANC</p>
+                            
+                        </div>
+
+                        </div>
+                        
+                        <!-- text  -->
+                        <div class="px-2 pt-8"> 
+                            <div>
+                                <h3 class="font-bold text-[12px] md:text-sm">boAt Airdops Prime 700 ANC</h3>
+                            </div>
+                            <div class="border-b-1 border-dashed border-gray-500/40 py-2"></div>
+                            <div class="relative flex items-center justify-between mt-2">
+                                <h3 class="font-bold text-[14px] md:text-lg">₹1,799</h3>
+                                <div class="flex gap-3 items-center justify-center">
+                                    <div class="flex relative items-center justify-center ">
+                                    <div class="absolute left-2 h-4  w-4 bg-gray-100 rounded-full"></div>
+                                    <div class=" h-4 w-4 bg-gray-600 rounded-full"></div>
+                                </div>
+                                <p class=" text-[10px] md:text-xs">+5</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-2 text-[10px] md:text-xs">
+                                <p>₹4,499</p>
+                                <h4 class=" font-bold text-green-600">70% off</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" rounded-xl bg-gray-50 pb-2">
+                        <div class="relative ">
+                            <img class="w-full rounded-t-lg" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Partypal_65_Pro.png?v=1759823976&width=200" alt="">
+                            <div class="absolute top-0 rounded-r-sm rounded-tl-lg bg-black text-[8px] md:text-xs text-white p-1 font-bold"><p>New Launch </p></div>
+                            <div class=" absolute w-full -bottom-4 h-6 md:h-8 bg-yellow-400 rounded-b-lg flex items-center justify-between px-1 md:px-2">
+                            <p class="text-[8px] md:text-xs font-semibold">42W RMS Sound</p>
+                            
+                        </div>
+
+                        </div>
+                        
+                        <!-- text  -->
+                        <div class="px-2 pt-8"> 
+                            <div>
+                                <h3 class="font-bold text-[12px] md:text-sm">boAt Party Pal </h3>
+                            </div>
+                            <div class="border-b-1 border-dashed border-gray-500/40 py-2"></div>
+                            <div class="relative flex items-center justify-between mt-2">
+                                <h3 class="font-bold text-[14px] md:text-lg">₹5,399</h3>
+                                <div class="flex gap-3 items-center justify-center">
+                                    <div class="flex relative items-center justify-center ">
+                                    <div class="absolute left-2 h-4  w-4 bg-sky-700 rounded-full"></div>
+                                    <div class=" h-4 w-4 bg-gray-600 rounded-full"></div>
+                                </div>
+                                <p class=" text-[10px] md:text-xs">+2</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-2 text-[10px] md:text-xs">
+                                <p>₹15,499</p>
+                                <h4 class=" font-bold text-green-600">60% off</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" rounded-xl bg-gray-50 pb-2">
+                        <div class="relative ">
+                            <img class="w-full rounded-t-lg" src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Airdopes_Ace_Gen_2.png?v=1759832001&width=200" alt="">
+                            <div class="absolute top-0 rounded-r-sm rounded-tl-lg bg-black text-[8px] md:text-xs text-white p-1 font-bold"><p>New Launch</p></div>
+                            <div class=" absolute w-full -bottom-4 h-6 md:h-8 bg-yellow-400 rounded-b-lg flex items-center justify-between px-1 md:px-2">
+                            <p class="text-[8px] md:text-xs font-semibold">35 Hours Playback</p>
+                            
+                        </div>
+
+                        </div>
+                        
+                        <!-- text  -->
+                        <div class="px-2 pt-8"> 
+                            <div>
+                                <h3 class="font-bold text-[12px] md:text-sm">boAt Airdopes Alpha</h3>
+                            </div>
+                            <div class="border-b-1 border-dashed border-gray-500/40 py-2"></div>
+                            <div class="relative flex items-center justify-between mt-2">
+                                <h3 class="font-bold text-[14px] md:text-lg">₹1,999</h3>
+                                <div class="flex gap-3 items-center justify-center">
+                                    <div class="flex relative items-center justify-center ">
+                                    <div class="absolute left-2 h-4  w-4 bg-gray-900 rounded-full"></div>
+                                    <div class=" h-4 w-4 bg-gray-600 rounded-full"></div>
+                                </div>
+                                <p class=" text-[10px] md:text-xs">+4</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 mt-2 text-[10px] md:text-xs">
+                                <p>₹3,499</p>
+                                <h4 class=" font-bold text-green-600">64% off</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- recently viewed  -->
+        <section class="px-4 mt-4">
+            <div class="container mx-auto">
+        
+        <h2 class="text-3xl font-medium mb-6 text-black">
+            Recently <span class="font-bold border-b-4 border-red-600">viewed</span>
+        </h2>
+
+        <div id="boat-scroller" class="flex flex-nowrap overflow-x-auto gap-6 pb-8 hide-scrollbar snap-x snap-mandatory">
+
+            <div class="min-w-[320px] w-[320px] flex-shrink-0 border border-gray-200 rounded-2xl overflow-hidden bg-white snap-center hover:shadow-lg transition-shadow">
+                <div class="relative h-72 bg-[#1a1a1a] flex items-center justify-center">
+                    <div class="absolute top-3 left-0 bg-black text-white text-[10px] font-bold px-2 py-1 rounded-r flex items-center gap-1">
+                        <span>🚀</span> Bestseller
+                    </div>
+                    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/r255pro_55d805bc-f2e1-4861-9533-8eee57081305.jpg?v=1682573437&width=200" alt="Headphones" class="h-full w-full object-cover m">
+                </div>
+
+                <div class="bg-[#FFD300] px-4 py-2 flex justify-between items-center text-xs font-extrabold text-black">
+                    <span>60 Hours Playback</span>
+                    <span class="bg-white px-1.5 py-0.5 rounded text-[10px] flex items-center">
+                        ★ 4.8
+                    </span>
+                </div>
+
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2 truncate">boAt Rockerz 255 Pro+</h3>
+                    
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="font-bold text-lg">₹1,099</span>
+                        <span class="text-gray-400 text-sm line-through">₹3,999</span>
+                        <span class="text-emerald-500 text-sm font-bold">72% off</span>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-gray-100 text-[10px] px-3 py-1 rounded-full text-gray-600 font-medium">10mm Drivers</span>
+                        <span class="bg-gray-100 text-[10px] px-3 py-1 rounded-full text-gray-600 font-medium">boAt Signature Sound</span>
+                    </div>
+
+                    <button class="w-full bg-[#1A1A1A] text-white font-bold py-3 rounded-lg hover:bg-gray-800 transition">
+                        Add To Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="min-w-[320px] w-[320px] flex-shrink-0 border border-gray-200 rounded-2xl overflow-hidden bg-white snap-center hover:shadow-lg transition-shadow">
+                <div class="relative h-72 bg-[#052e16] flex items-center justify-center">
+                    <div class="absolute top-3 left-0 bg-black text-white text-[10px] font-bold px-2 py-1 rounded-r flex items-center gap-1">
+                        <span>🎉</span> New Launch
+                    </div>
+                    <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Stone_350_pro_1.png?v=1742303499&width=200" alt="Speaker" class="h-full w-full  object-cover">
+                </div>
+
+                <div class="bg-[#FFD300] px-4 py-2 flex justify-between items-center text-xs font-extrabold text-black">
+                    <span>12 Hours Playback</span>
+                    <span class="bg-white px-1.5 py-0.5 rounded text-[10px] flex items-center">
+                        ★ 4.8
+                    </span>
+                </div>
+
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2 truncate">boAt Stone 350 Pro</h3>
+                    
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="font-bold text-lg">₹1,699</span>
+                        <span class="text-gray-400 text-sm line-through">₹4,990</span>
+                        <span class="text-emerald-500 text-sm font-bold">66% off</span>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-gray-100 text-[10px] px-3 py-1 rounded-full text-gray-600 font-medium">Bluetooth V5.3</span>
+                        <span class="bg-gray-100 text-[10px] px-3 py-1 rounded-full text-gray-600 font-medium">IPX5 rating</span>
+                        <span class="bg-gray-100 text-[10px] px-3 py-1 rounded-full text-gray-600 font-medium">RGB LED</span>
+                    </div>
+
+                    <button class="w-full bg-[#1A1A1A] text-white font-bold py-3 rounded-lg hover:bg-gray-800 transition">
+                        Add To Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+        </section>
+
+        </main>
+         <!-- Footer Container -->
+    <footer class="bg-[#eff4f7] py-16 px-6 lg:px-12 text-gray-900">
+        <div class=" mx-auto flex flex-col lg:flex-row justify-between gap-12 lg:gap-20">
+
+            <div class="w-full lg:w-1/3 flex flex-col gap-6 justify-center md:justify-start items-center ">
+                <a href="#" class="text-5xl font-bold flex items-end">
+                    <span>bo</span>
+                    <span class="text-red-600 relative mx-[1px]">
+                        A
+                    </span>
+                    <span>t</span>
+                </a>
+
+                <p class="text-xl font-bold">Subscribe to our email alerts!</p>
+
+
+                <div class="relative max-w-sm">
+                    <input type="email" placeholder="Enter your email address" 
+                        class="w-full h-12 pl-5 pr-12 rounded-lg border-none focus:outline-none focus:ring-2 focus:ring-gray-200 text-sm text-gray-600 placeholder-gray-400 shadow-sm">
+                    <button class="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-black transition-colors border-1 rounded-full h-6 w-6">
+                        <i class="ph ph-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-8 text-sm">
+            
+                <div class="flex flex-col gap-4">
+                    <div class="flex justify-between md:justify-start items-center">
+                        <h3 class="font-bold text-base flex items-center gap-1 cursor-pointer">Shop </h3>
+                        <h3 class="text-lg font-bold">+</h3>
+                    </div>
+                    <ul class="hidden md:flex flex-col gap-3 text-gray-700 font-medium">
+                        <li><a href="#" class="hover:text-black transition">True Wireless Earbuds</a></li>
+                        <li><a href="#" class="hover:text-black transition">Wired Headphones</a></li>
+                        <li><a href="#" class="hover:text-black transition">Home Audio</a></li>
+                        <li><a href="#" class="hover:text-black transition">Smart Watches</a></li>
+                        <li><a href="#" class="hover:text-black transition">Misfit Trimmers</a></li>
+                    </ul>
+                </div>
+
+                <div class="hidden md:flex flex-col gap-4 mt-0 md:mt-10"> 
+                    <ul class="hidden md:flex  flex-col gap-3 text-gray-700 font-medium">
+                        <li><a href="#" class="hover:text-black transition">Wireless Headphones</a></li>
+                        <li><a href="#" class="hover:text-black transition">Wireless Speakers</a></li>
+                        <li><a href="#" class="hover:text-black transition">Mobile Accessories</a></li>
+                        <li><a href="#" class="hover:text-black transition">TRebel</a></li>
+                        <li><a href="#" class="hover:text-black transition">Refer & Earn</a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <div class="flex justify-between md:justify-start items-center">
+                        <h3 class="font-bold text-base flex items-center gap-1 cursor-pointer">Help </h3>
+                        <h3 class="text-lg font-bold">+</h3>
+                    </div>
+                    <ul class="hidden md:flex  flex-col gap-3 text-gray-700 font-medium">
+                        <li><a href="#" class="hover:text-black transition">Track Your Order</a></li>
+                        <li><a href="#" class="hover:text-black transition">Warranty & Support</a></li>
+                        <li><a href="#" class="hover:text-black transition">Return Policy</a></li>
+                        <li><a href="#" class="hover:text-black transition">Service Centers</a></li>
+                        <li><a href="#" class="hover:text-black transition">Bulk Orders</a></li>
+                        <li><a href="#" class="hover:text-black transition">Why Buy Direct</a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <div class="flex justify-between md:justify-start items-center">
+                        <h3 class="font-bold text-base flex items-center gap-1 cursor-pointer">Company </h3>
+                        <h3 class="text-lg font-bold">+</h3>
+                    </div>
+                    <ul class="hidden md:flex  flex-col gap-3 text-gray-700 font-medium">
+                        <li><a href="#" class="hover:text-black transition">About boAt</a></li>
+                        <li><a href="#" class="hover:text-black transition">News</a></li>
+                        <li><a href="#" class="hover:text-black transition">Read Our Blog</a></li>
+                        <li><a href="#" class="hover:text-black transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-black transition">Security</a></li>
+                        <li><a href="#" class="hover:text-black transition">Investor Relations</a></li>
+                        <li><a href="#" class="hover:text-black transition">Social Responsibility</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
+
